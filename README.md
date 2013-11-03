@@ -33,6 +33,13 @@ Running [Bitmessage client](https://github.com/Bitmessage/PyBitmessage) with API
 
     api.send_message to, from, "This is subject", "This is message"
 
+### Running the tests
+
+    For tests to to pass it is necessary to set the BM_URI environment
+    variable.  For example:
+
+    BM_URI=http://user:password@host:port/ rake test
+
 ## FAQ
 
 Q: Does this cover 100% of the API?
