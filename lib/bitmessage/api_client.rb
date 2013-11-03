@@ -2,7 +2,7 @@ require 'xmlrpc/client'
 require 'json'
 require 'base64'
 
-module BitMessage
+module Bitmessage
   class ApiClient
     class Address
       attr_accessor :label, :address, :stream, :enabled

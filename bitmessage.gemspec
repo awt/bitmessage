@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Bitmessage::VERSION
   spec.authors       = ["Adam Thorsen"]
   spec.email         = ["awt@fastmail.fm"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{This gem provides an client library for the PyBitmessage API.}
+  spec.summary       = %q{This gem allows listing, sending, generating, etc messages via the Bitmessage protocol.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
