@@ -5,7 +5,7 @@ created by [robzon](https://github.com/robzon).
 
 ## Requirements
 
-Running [BitMessage client](https://github.com/Bitmessage/PyBitmessage) with API enabled.
+Running [Bitmessage client](https://github.com/Bitmessage/PyBitmessage) with API enabled.
 
 ## Usage
 
