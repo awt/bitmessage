@@ -1,29 +1,40 @@
-# Bitmessage
+## BitMessage API Ruby Wrapper
 
-TODO: Write a gem description
+Thin API wrapper for the official BitMessage Python client.  This gem is based on the [original library](https://github.com/robzon/bitmessage-api-ruby) 
+created by [robzon](https://github.com/robzon).
 
-## Installation
+## Requirements
 
-Add this line to your application's Gemfile:
-
-    gem 'bitmessage'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install bitmessage
+Running [BitMessage client](https://github.com/Bitmessage/PyBitmessage) with API enabled.
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'bitmessage'
 
-## Contributing
+    api = Bitmessage::ApiClient.new 'http://user:password@host:port/'
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    api.add 3, 5
+
+### Getting a list of messages
+
+    inbox = api.get_all_inbox_messages
+    
+    puts "You have #{inbox.count} messages:"
+
+    inbox.each do |msg|
+      puts "#{msg.msgid}  #{msg.from}  #{msg.subject}"
+    end
+
+### Sending a message
+
+
+    to = "BM-orkCbppXWSqPpAxnz6jnfTZ2djb5pJKDb" # echo service
+    from = api.list_addresses.first.address
+
+    api.send_message to, from, "This is subject", "This is message"
+
+## FAQ
+
+Q: Does this cover 100% of the API?
+
+A: Not yet.
