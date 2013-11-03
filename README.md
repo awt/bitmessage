@@ -1,4 +1,4 @@
-## BitMessage API Ruby Wrapper
+## Bitmessage API Ruby Wrapper
 
 Thin API wrapper for the official BitMessage Python client.  This gem is based on the [original library](https://github.com/robzon/bitmessage-api-ruby) 
 created by [robzon](https://github.com/robzon).
